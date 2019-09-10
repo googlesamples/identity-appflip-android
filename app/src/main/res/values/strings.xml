@@ -1,0 +1,39 @@
+<!--
+ Copyright 2019 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+    <string name="app_name">AppFlip Sample App</string>
+    <string name="welcome">"Welcome to AppFlip Sample App. To try AppFlip, please open app:
+
+        AppFlip-Test-Tool
+
+Intent filter = com.google.appflip-sample
+Package ID = com.google.appflip_sample_android"</string>
+    <string name="instruction">Please set expected caller app package name and fingerprint in strings.xml</string>
+    <string name="calling_app_package_name">com.google.appfliptesttool</string>
+    <string name="calling_app_fingerprint">54:E1:6A:B5:4C:CB:75:13:7D:CF:2A:4C:37:97:E4:5F:28:42:76:0A:6F:CE:C7:04:5F:49:0B:24:08:E7:E3:5E</string>
+    <string name="pkgSenderName">Sender App Package Name</string>
+    <string name="fingerprintLabel">Sender App Fingerprint</string>
+    <string name="selectResponseText">Select Response</string>
+    <string name="option1">RESULT_OK empty Auth_Code</string>
+    <string name="option2">RESULT_OK with Auth_Code</string>
+    <string name="option3">RESULT_CANCELLED</string>
+    <string name="option4">Recoverable Error with Code</string>
+    <string name="option5">Unrecoverable - User Not Consent</string>
+    <string name="option6">Unrecoverable Error with Code</string>
+    <string name="option7">Invalid Request with Code</string>
+    <string name="errorCodeLabel">Error Code</string>
+    <string name="submitButton">Send</string>
+</resources>

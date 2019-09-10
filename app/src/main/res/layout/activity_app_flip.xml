@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2019 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppFlipActivity">
+
+    <TextView
+      android:id="@+id/titleText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="@string/app_name"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/packageNameLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:layout_marginStart="24dp"
+      android:text="@string/pkgSenderName"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/titleText"/>
+    <TextView
+      android:id="@+id/fingerprintLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="24dp"
+      android:text="@string/fingerprintLabel"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/packageNameTextView"/>
+    <TextView
+      android:id="@+id/selectResponseText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="24dp"
+      android:text="@string/selectResponseText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/fingerprintTextView"/>
+    <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="wrap_content"
+      android:layout_height="223dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="8dp"
+      app:layout_constraintStart_toStartOf="@+id/selectResponseText"
+      app:layout_constraintTop_toBottomOf="@+id/selectResponseText">
+      <RadioButton
+        android:id="@+id/resultOkEmptyCodeRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option1"/>
+      <RadioButton
+        android:id="@+id/resultOkWithCodeRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option2"/>
+      <RadioButton
+        android:id="@+id/resultCancelledRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option3"/>
+      <RadioButton
+        android:id="@+id/errorRecoverableRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option4"/>
+      <RadioButton
+        android:id="@+id/errorUserNotConsentRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option5"/>
+      <RadioButton
+        android:id="@+id/errorUnrecoverableWithCodeRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option6"/>
+      <RadioButton
+        android:id="@+id/invalidRequestRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/option7"/>
+    </RadioGroup>
+    <TextView
+      android:id="@+id/errorCodeLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/errorCodeLabel"
+      android:textSize="14sp"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toTopOf="@+id/errorCodeEditText"
+      app:layout_constraintStart_toStartOf="@+id/errorCodeEditText"/>
+    <EditText
+      android:id="@+id/errorCodeEditText"
+      android:layout_width="51dp"
+      android:layout_height="43dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:ems="10"
+      android:enabled="false"
+      android:inputType="numberSigned"
+      android:textSize="14sp"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/radioGroup"
+      app:layout_constraintTop_toTopOf="@+id/radioGroup"/>
+    <Button
+      android:id="@+id/submitButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="@string/submitButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <TextView
+      android:id="@+id/logTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/submitButton"/>
+    <TextView
+      android:id="@+id/packageNameTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="24dp"
+      android:text="@string/calling_app_package_name"
+      android:textColor="#2196F3"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/packageNameLabel"/>
+    <TextView
+      android:id="@+id/fingerprintTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="24dp"
+      android:text="@string/calling_app_fingerprint"
+      android:textColor="#2196F3"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/fingerprintLabel"/>
+
+
+  </android.support.constraint.ConstraintLayout>
+</ScrollView>

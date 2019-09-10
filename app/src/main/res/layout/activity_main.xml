@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2019 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+      android:id="@+id/packageNameLabelMain"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="32dp"
+      android:text="@string/pkgSenderName"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/instructionTextView"/>
+    <EditText
+      android:id="@+id/packageNameEditTextMain"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="24dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="@string/calling_app_package_name"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/packageNameLabelMain"
+      app:layout_constraintTop_toBottomOf="@+id/packageNameLabelMain"/>
+    <TextView
+      android:id="@+id/fingerprintLabelMain"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/fingerprintLabel"
+      app:layout_constraintStart_toStartOf="@+id/packageNameLabelMain"
+      app:layout_constraintTop_toBottomOf="@+id/packageNameEditTextMain"/>
+    <EditText
+      android:id="@+id/fingerprintEditTextMain"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="24dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="@string/calling_app_fingerprint"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/fingerprintLabelMain"
+      app:layout_constraintTop_toBottomOf="@+id/fingerprintLabelMain"/>
+    <TextView
+      android:id="@+id/titleLabelMain"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_name"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.100000024"/>
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:text="@string/welcome"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/titleLabelMain"/>
+    <TextView
+      android:id="@+id/instructionTextView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="24dp"
+      android:text="@string/instruction"
+      android:textColor="#000000"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/packageNameLabelMain"
+      app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+</android.support.constraint.ConstraintLayout>
