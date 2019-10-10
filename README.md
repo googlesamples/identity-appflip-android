@@ -23,8 +23,7 @@ with Google.
 1. Import the project into Android Studio
 1. Open `res/values/strings.xml` and edit the following values:
    - `calling_app_package_name`: Application id of the calling app
-   - `calling_app_fingerprint`: SHA fingerprint of the calling app signature
-     ([how do I find this?](https://developers.google.com/android/guides/client-auth))
+   - `calling_app_fingerprint`: SHA256 fingerprint of the calling app signature ([how do I find this?](https://developers.google.com/android/guides/client-auth))
 1. Build and run the app on your target device
 
 ## License
