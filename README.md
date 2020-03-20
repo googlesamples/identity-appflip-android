@@ -9,9 +9,10 @@ The sample app is preconfigured to integrate with the
 which you can use to easily get started before you configure account linking
 with Google.
 
-## Screenshots
+Documentation links:
 
-![](images/screenshot.png)
+- [App Flip Overview](https://developers.google.com/identity/account-linking/app-flip-overview)
+- [App Flip for Android](https://developers.google.com/identity/account-linking/app-flip-android)
 
 ## Prerequisites
 
@@ -25,6 +26,10 @@ with Google.
    - `calling_app_package_name`: Application id of the calling app
    - `calling_app_fingerprint`: SHA256 fingerprint of the calling app signature ([how do I find this?](https://developers.google.com/android/guides/client-auth))
 1. Build and run the app on your target device
+
+## Screenshots
+
+![](images/screenshot.png)
 
 ## License
 
