@@ -26,6 +26,7 @@ Documentation links:
    - `calling_app_package_name`: Application id of the calling app
    - `calling_app_fingerprint`: SHA256 fingerprint of the calling app signature ([how do I find this?](https://developers.google.com/android/guides/client-auth))
 1. Build and run the app on your target device
+1. Setup and run the [App Flip Test Tool for Android](https://github.com/googlesamples/identity-appflip-tester-android) to simulate the App Flip interaction
 
 ## Screenshots
 
