@@ -1,5 +1,7 @@
 # App Flip Sample for Android
 
+[![ci][1]][2]
+
 This sample app demonstrates an App Flip compatible account linking integration
 on Android. You can use this app to verify how to respond to an incoming App Flip
 intent from Google mobile apps.
@@ -47,3 +49,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[1]: https://github.com/googlesamples/identity-appflip-android/workflows/ci/badge.svg
+[2]: https://github.com/googlesamples/identity-appflip-android/actions
